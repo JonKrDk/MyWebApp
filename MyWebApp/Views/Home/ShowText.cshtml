@@ -1,0 +1,22 @@
+﻿@model MyWebApp.Models.TextModel
+@{
+    ViewData["Title"] = "ShowText";
+}
+
+<h1>ShowText</h1>
+
+<p>Du indtastede @Model.InText</p>
+<p>Det blev til @Model.OutText</p>  
+
+<p class="btn btn-primary" id="strangeBtn">Fjern Mig</p>
+
+@section Scripts {
+    <script>
+        $(function () {
+            $('#strangeBtn').click(function(e) {
+                $('#strangeBtn').hide();
+            })
+        });
+    </script>
+}
+

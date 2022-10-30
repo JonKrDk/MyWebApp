@@ -1,0 +1,17 @@
+﻿@model MyWebApp.Models.TextModel
+
+@{
+    ViewData["Title"] = "EnterText";
+}
+
+<h1>EnterText</h1>
+
+<form asp-controller="Home" asp-action="ShowText" method="post">
+    <div class="form-group">
+        <label asp-for="InText"></label>
+        <input asp-for="InText" class="form-control" />
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Send" class="btn btn-primary" />
+    </div>
+</form>

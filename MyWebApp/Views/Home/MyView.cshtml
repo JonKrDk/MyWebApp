@@ -1,0 +1,14 @@
+﻿@using MyWebApp.Controllers
+@inject ILogger<HomeController> logger
+
+@{
+    ViewData["Title"] = "MyView";
+}
+
+<h1>MyView</h1>
+
+@for (int a = 0; a < 10; a++)
+{
+    logger.LogDebug($"Linie nummer {a}");
+    <p>Her er linie nummer @a</p>
+}
